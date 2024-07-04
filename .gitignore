@@ -9,3 +9,6 @@ database/.DS_Store
 src/.DS_Store
 .Rhistory
 src/carrier/UnsuccessfulPlotsDump.R
+
+# Unnecessary duplicated file
+index.html
