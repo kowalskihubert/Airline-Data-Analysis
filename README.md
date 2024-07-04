@@ -1,48 +1,46 @@
-﻿# AirlineDataAnalysis
- 
-### Prezentacja wyników/Result presentation:
+# AirlineDataAnalysis
 
-[LIVE SERVER](https://adamkaniasty.github.io/AirlineDataAnalysis/)
+## Live Demo
+Explore the results of our analysis on our [Live Server](https://adamkaniasty.github.io/AirlineDataAnalysis/). :globe_with_meridians:
 
-### _Eng below_
+## Overview
+The **AirlineDataAnalysis** project investigates passenger flight delays in the USA from 1987 to 2008. The goal is to answer pertinent questions that are of interest to both passengers and airline carriers, using a comprehensive dataset and advanced data analysis techniques.
 
-### Założenia projektu:
+## Data Sources
+The main dataset used in this project is available from the [Harvard Dataverse](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/HG7NV7), containing detailed information about commercial flights. Additional data sources were also utilized, and the corresponding CSV files can be found in the `data/` folder of this repository.
 
-- Postawienie interesujących pytań dotyczących opóźnień lotów pasażerskich na terenie USA w latach 1987-2008
-- Eksploracja danych dostępnych na stronie: [](https://app.idroo.com/boards/uQIuWpBpP0)
-- Wizualizacja wyników zapytań
+## Project Goals
+- Formulate interesting questions regarding passenger flight delays. :airplane:
+- Explore and analyze the available data. :gear:
+- Visualize the results to generate valuable insights for passengers and carriers. :bar_chart:
 
-### Postawione pytania:
+## Questions Addressed
 
-Perspektywa pasażera:
+### Passenger Perspective
+1. What weather conditions influence weather-related delays?
+2. Which airports should be avoided for connections due to cascade delays?
+3. What does a map of the USA reflecting the size of delays look like?
 
-- Jakie warunki pogodowe wpływają na opóźnienia związane z pogodą (weather delays)?
-- Przez które lotniska nie warto latać z przesiadką w wyniku opóźnień kaskadowych?
-- Jak wygląda mapa USA odzwierciedlająca wielkość opóźnień?
+### Carrier Perspective
+1. Which carrier recorded the most safety-related delays?
+2. Is there a correlation between the average delay of a carrier's planes and its customer ratings?
+3. Which planes in the fleets of different airlines generated the least delays? Does the reliability of a plane depend on factors such as the year of production and the manufacturer?
 
-Perspektywa przewoźnika:
+## Technologies Used
+- **Database**: MySQL for storing the large dataset (~12GB).
+- **Data Analysis & Visualization**: 
+  - **R**: For data transformation, analysis, and visualization.
+  - **Packages**: 
+    - `RMySQL`: For executing SQL queries from R.
+    - `ggplot2`, `plotly`, `gganimate`, `ggthemes`: For creating interactive and static visualizations.
+    - `lubridate`, `dplyr`: For data manipulation and transformation.
 
-- Który przewoźnik odnotował najwięcej opóźnień związanych z problemami z bezpieczeństwem?
-- Czy istnieje korelacja między średnim opóźnieniem samolotów danego przewoźnika, a jego oceną przez klientów?
-- Które samoloty we flotach danych lini lotniczych generowały najmniej opóźnień? Czy stopień bezawaryjności samolotu zależy od takich czynników jak rok produkcji samolotu, producent?
+## Methodology
+1. **Data Storage**: The flight data was stored in a MySQL database due to its large size.
+2. **Data Retrieval**: SQL queries were executed using the `RMySQL` package to retrieve relevant information.
+3. **Data Analysis**: Data was analyzed and visualized in R using various packages.
+4. **Presentation**: The final analysis was compiled into an `.rmd` file and converted to an interactive `.html` document for presentation.
 
-## ENG
-
-### Project assumptions:
-- Asking interesting questions about passenger flight delays in the USA from 1987-2008
-- Exploring data available on the website:
-- Visualizing query results
-
-### Questions asked:
-
-Passenger perspective:
-
-- What weather conditions influence delays related to weather (weather delays)?
-- Through which airports is it not worth flying with a connection due to cascade delays?
-- What does the map of the USA reflecting the size of delays look like?
-
-Carrier perspective:
-
-- Which carrier recorded the most delays related to safety issues?
-- Is there a correlation between the average delay of a carrier's planes and its rating by customers?
-- Which planes in the fleets of given airlines generated the least delays? Does the reliability of a plane depend on factors such as the year of plane production, the manufacturer?
+## Authors
+- Adam Kaniasty
+- Hubert Kowalski
